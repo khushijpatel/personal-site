@@ -14,7 +14,7 @@ const Quotes = () => {
       <div className="flex flex-col items-center max-lg:mt-10">
         <div
           // responsive design
-          className="h-[50vh] md:h-[30rem] rounded-md flex flex-col antialiased  items-center justify-center relative overflow-hidden"
+          className="h-[40vh] md:h-[25rem] rounded-md flex flex-col antialiased  items-center justify-center relative overflow-hidden"
         >
           <InfiniteMovingCards
             items={quotes}
