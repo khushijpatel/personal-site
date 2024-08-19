@@ -2,11 +2,11 @@ import React from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { CanvasRevealEffect } from "./ui/CanvasRevealEffect";
 
-const Approach = () => {
+const AboutMe = () => {
   return (
-    <section className="w-full py-20">
+    <section id="about" className="w-full py-20">
       <h1 className="heading">
-        My <span className="text-purple">approach</span>
+        About <span className="text-purple">Me</span>
       </h1>
       <div className="my-20 flex flex-col lg:flex-row items-center justify-center w-full gap-4">
         <Card
@@ -53,7 +53,7 @@ const Approach = () => {
   );
 };
 
-export default Approach;
+export default AboutMe;
 
 const Card = ({
   title,
