@@ -12,10 +12,10 @@ const AboutMe = () => {
         <Card
           title="My Academic Background"
           icon={<AceternityIcon order="Academics" />}
-          des="College: University of California, San Diego
-              Degree Pursuing: Masters in Science
-              Major: Computer Science with specialization in Artificial Intelligence
-              Degree Obtained: Bachelors of Science in Computer Science from UCSD"
+          des={`College: University of California, San Diego<br />
+                Degree Pursuing: Masters in Science<br />
+                Major: Computer Science with specialization in Artificial Intelligence<br />
+                Degree Obtained: Bachelors of Science in Computer Science from UCSD<br />`}
         >
           <CanvasRevealEffect
             animationSpeed={5.1}
@@ -67,6 +67,7 @@ const Card = ({
   des: string;
 }) => {
   const [hovered, setHovered] = React.useState(false);
+
   return (
     <div
       onMouseEnter={() => setHovered(true)}
@@ -117,14 +118,13 @@ const Card = ({
          relative z-10 mt-4 group-hover/canvas-card:text-white text-center
          group-hover/canvas-card:-translate-y-2 transition duration-200"
           style={{ color: "#E4ECFF" }}
-        >
-          {des}
-        </p>
+          dangerouslySetInnerHTML={{ __html: des }} // Render HTML with <br /> tags
+        />
       </div>
     </div>
   );
 };
-// add order prop for the Phase number change
+
 const AceternityIcon = ({ order }: { order: string }) => {
   return (
     <div>

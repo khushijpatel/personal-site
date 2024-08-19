@@ -39,7 +39,6 @@ const Experience = () => {
                 </h3>
                 <p
                   className="text-start text-white-100 mt-3 font-semibold"
-                  style={{ whiteSpace: "pre-line" }}
                 >
                   {card.desc}
                 </p>
