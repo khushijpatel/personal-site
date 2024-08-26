@@ -15,7 +15,12 @@ export const BentoGrid = ({
   children?: React.ReactNode;
 }) => {
   return (
-    <div className={cn("grid grid-cols-1 md:grid-cols-6 lg:grid-cols-5 md:grid-row-7 gap-4 lg:gap-8 mx-auto", className)}>
+    <div
+      className={cn(
+        "grid grid-cols-1 md:grid-cols-6 lg:grid-cols-5 md:grid-row-7 gap-4 lg:gap-8 mx-auto",
+        className
+      )}
+    >
       {children}
     </div>
   );
@@ -30,8 +35,7 @@ export const BentoGridItem = ({
   imgClassName,
   titleClassName,
   spareImg,
-}: 
-{
+}: {
   className?: string;
   id: number;
   title?: string | React.ReactNode;
@@ -41,10 +45,10 @@ export const BentoGridItem = ({
   titleClassName?: string;
   spareImg?: string;
 }) => {
-  const list1 = ["Java", "Python",  "C++", "Git", "Linux"];
-  const list2 = [ "Ubuntu", "TypeScript", "React", "JavaScript", "HTML"];
-  const list3 = [ "CSS", "Angular", "Next.js", "Haskell", "R"];
-  const list4 = ["MongoDB", "Kubernetes", "Docker", "JIRA", "Node.js"];
+  const list1 = ["Java", "Python", "C++", "Git", "Linux"];
+  const list2 = ["Ubuntu", "TypeScript", "Kubernetes", "JavaScript", "HTML"];
+  const list3 = ["CSS", "Angular", "Next.js", "Haskell", "R"];
+  const list4 = ["MongoDB", "React", "Docker", "JIRA", "Node.js"];
 
   const [copied, setCopied] = useState(false);
 
@@ -98,7 +102,7 @@ export const BentoGridItem = ({
             />
           )}
         </div>
-        {id === 6 && (
+        {id === 5 && (
           <BackgroundGradientAnimation>
             <div className="absolute z-50 inset-0 flex items-center justify-center text-white font-bold px-4 pointer-events-none text-3xl text-center md:text-4xl lg:text-7xl"></div>
           </BackgroundGradientAnimation>

@@ -3,6 +3,7 @@ import { FaLocationArrow } from "react-icons/fa6";
 import MagicButton from "./MagicButton";
 import { Spotlight } from "./ui/Spotlight";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
+import Image from "next/image";
 
 const Hero = () => {
   return (
@@ -53,9 +54,18 @@ const Hero = () => {
             className="text-center text-[40px] md:text-5xl lg:text-6xl"
           />
 
-          <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
-            Hi! I&apos;m Khushi, a Masters student majoring in Computer Science at University of California, San Diego.
-          </p>
+          <div className="flex flex-col md:flex-row items-center">
+            <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl md:mb-0 md:mr-4">
+              Hi! I&apos;m Khushi Patel, a Masters student majoring in Computer Science at University of California, San Diego.
+            </p>
+            <Image
+              src="/KP.jpg"
+              width={200}
+              height={200}
+              alt="Picture of the author"
+              className="rounded-full"
+            />
+          </div>
 
           <a href="#experience">
             <MagicButton

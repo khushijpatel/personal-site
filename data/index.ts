@@ -9,13 +9,13 @@ export const navItems = [
 export const gridItems = [
   {
     id: 1,
-    title:
-      "Currently looking for SWE Full-Time Roles starting in Summer 2025 and Internship Now-Jun 2025  ",
+    title: "Currently looking for SWE Full-Time Roles starting in Summer 2025 ",
     description: "",
-    className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]",
+    className:
+      "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh] opacity:0.25",
     imgClassName: "w-full h-full",
     titleClassName: "justify-end",
-    img: "/b1.svg",
+    img: "/swe.jpg",
     spareImg: "",
   },
   {
@@ -48,7 +48,6 @@ export const gridItems = [
     img: "/grid.svg",
     spareImg: "/b4.svg",
   },
-
   {
     id: 5,
     title: "My tech stack",
@@ -61,12 +60,12 @@ export const gridItems = [
   },
   {
     id: 6,
-    title: "Do you want to start a project together?",
+    title: "Want to get in touch?",
     description: "",
-    className: "lg:col-span-2 md:col-span-3 md:row-span-1",
+    className: "lg:col-span-2 md:col-span-3 md:row-span-1 opacity:0.25",
     imgClassName: "",
     titleClassName: "justify-center md:max-w-full max-w-60 text-center",
-    img: "",
+    img: "/connectbg.jpg",
     spareImg: "",
   },
 ];
@@ -76,7 +75,7 @@ export const projects = [
     id: 1,
     title: "Finance Tracker",
     des: "Developed an interactive full-stack finance tracker web application with HTML, CSS, JavaScript, React, Node.js, MongoDB.",
-    img: "/p1.svg",
+    img: "/FinanceTracker.png",
     iconLists: ["/re.svg"],
     link: "https://github.com/acmucsd/hackschool-fa22",
   },
@@ -84,7 +83,7 @@ export const projects = [
     id: 2,
     title: "HackRacer",
     des: "A fun typing game full-stack web app using HTML, CSS, JavaScript, React, Node.js, MongoDB, and Next.js",
-    img: "/p2.svg",
+    img: "/HackRacer.png",
     iconLists: ["/next.svg", "/re.svg"],
     link: "https://hackschool-fa23.vercel.app/",
   },
@@ -117,23 +116,26 @@ export const quotes = [
     name: "Stephen Hawking",
   },
   {
-    quote: "We are all now connected by the Internet, like neurons in a giant brain.",
+    quote:
+      "We are all now connected by the Internet, like neurons in a giant brain.",
     name: "Stephen Hawking",
-  }
+  },
 ];
 
 export const workExperience = [
   {
     id: 1,
     title: "Software Engineering Intern",
+    company: "Northrop Grumman",
     dates: "June 2024 - August 2024",
-    desc: "Lead upgrades to COTS packages from Angular 9 to Angular 17. Research node packages and dependencies to port over libraries to upgrade. Resolve dependency issues and compiler errors",
+    desc: "Lead upgrades to COTS packages from Angular 9 to Angular 17.Research node packages and dependencies to port over libraries to upgrade. Resolve dependency issues and compiler errors",
     className: "md:col-span-2",
     thumbnail: "/exp1.svg",
   },
   {
     id: 2,
     title: "Software Engineering Intern",
+    company: "Northrop Grumman",
     dates: "June 2023 - August 2023",
     desc: "Developed algorithm for update functionality, user accessibilities, testing, icon changes and more in Java, C++ using Linux and Windows VMs for 4 applications. Implemented frontend changes to plot views in application and retrieved classification level for the user from Oracle Database for plot title. Update scripts for the development environments in the VMs",
     className: "md:col-span-2",
@@ -142,6 +144,7 @@ export const workExperience = [
   {
     id: 3,
     title: "Software Engineering Intern",
+    company: "Northrop Grumman",
     dates: "June 2022 - September 2022",
     desc: "Redesign and implement user interfaces on applications in Java used for telemetry, control, and cryptographic keys planning using JBoss, Atlassian Suite, Linux and Windows VMs to provide secure satellite communication. Address 120+ security vulnerabilities from Fortify findings to secure program. Performed and fixed 50+ critical and major code quality bugs and maintenance issues reported on SonarQube",
     className: "md:col-span-2",
@@ -150,6 +153,7 @@ export const workExperience = [
   {
     id: 4,
     title: "Instructional Assistant",
+    company: "University of California, San Diego",
     dates: "September 2023 - June 2024",
     desc: "CSE 190: Host weekly tutor hours to help 50 students work on projects in the open source code IdleLib, using LLMs like Github CoPilot, and answer conceptual or technical questions related to course content. Create grading rubrics and grade students’ project submissions on GitHub in a PR, providing critical feedback and reviewing changes similar to an industry code review setting. CSE 11: Host weekly tutor hours to help 600+ students debug Java code and answer conceptual questions, grade exams, worksheets and programming assignments",
     className: "md:col-span-2",
@@ -158,6 +162,7 @@ export const workExperience = [
   {
     id: 5,
     title: "Student Researcher",
+    company: "University of California, San Diego",
     dates: "September 2022 - June 2023",
     desc: "Conducting research in computer vision for indoor scenes focused on material, geometry, and lighting under advisement of Professor Manmohan Chandraker, Yu-Ying Yeh, and Rui Zhu at UC San Diego. Improving existing model for an indoor scene inverse rendering framework, PhotoScene, for a higher-quality geometric reconstruction on a given indoor scene from SUN-RGBD dataset by adapting from InstPIFu. Developed pre and post image processing scripts using Python and PyTorch while using Kubernetes and Docker for remote access to cluster resources on a Linux development environment",
     className: "md:col-span-2",
@@ -166,6 +171,7 @@ export const workExperience = [
   {
     id: 6,
     title: "Technical Event Director",
+    company: "Association for Computing Machinery at UC San Diego",
     dates: "September 2021 - August 2023",
     desc: "Designed and hosted 20+ workshops on various topics in software engineering and web development using technologies and languages such as introducing Git, HTML, CSS, JavaScript, React.js, Python, Agile, Clean Coding, and more. Developed an interactive full-stack finance tracker web application with HTML, CSS, JavaScript, React.js, Node.js, MongoDB reaching 3,000+ students. Mentored 4 projects teams of 6 developers to develop a full-stack web application using the MERN stack in 10 weeks",
     className: "md:col-span-2",
@@ -183,5 +189,10 @@ export const socialMedia = [
     id: 2,
     img: "/link.svg",
     url: "https://linkedin.com/in/pateljkhushi",
+  },
+  {
+    id: 3,
+    img: "/email.png",
+    url: "mailto:kjp002@ucsd.edu",
   },
 ];
