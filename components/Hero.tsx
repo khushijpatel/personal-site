@@ -50,7 +50,7 @@ const Hero = () => {
            *  Link: https://ui.aceternity.com/components/text-generate-effect
            */}
           <TextGenerateEffect
-            words="Transforming Ideas into Code, Always Learning"
+            words="Transforming Ideas into Code, Always Innovating"
             className="text-center text-[40px] md:text-5xl lg:text-6xl"
           />
 
