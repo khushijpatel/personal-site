@@ -27,21 +27,48 @@ const config = {
     },
     extend: {
       colors: {
+        // Portfolio theme colors - nature inspired with more variety
+        forest: {
+          900: "#022c22",
+          800: "#064e3b",
+          700: "#047857",
+        },
+        ocean: {
+          500: "#0ea5e9",
+          300: "#7dd3fc",
+          600: "#0284c7",
+          700: "#0369a1",
+        },
+        sand: {
+          100: "#f5f5f4",
+          300: "#d6d3d1",
+          500: "#a8a29e",
+        },
+        aurora: "#34d399",
+        // Enhanced color palette with blues and purples
+        blue: {
+          "100": "#7dd3fc", // ocean-300
+          "200": "#38bdf8", // sky-400
+          "300": "#0ea5e9", // ocean-500
+          DEFAULT: "#0ea5e9", // ocean-500
+        },
+        purple: {
+          "400": "#a855f7", // violet-500
+          "500": "#8b5cf6", // violet-500
+          DEFAULT: "#CBACF9", // light purple for accents
+        },
+        // Keep existing structure but enhance with more colors
         black: {
-          DEFAULT: "#000",
-          100: "#000319",
-          200: "rgba(17, 25, 40, 0.75)",
+          DEFAULT: "#022c22", // forest-900
+          100: "#064e3b", // forest-800
+          200: "rgba(2, 44, 34, 0.75)", // forest-900 with opacity
           300: "rgba(255, 255, 255, 0.125)",
         },
         white: {
-          DEFAULT: "#FFF",
-          100: "#BEC1DD",
-          200: "#C1C2D3",
+          DEFAULT: "#f5f5f4", // sand-100
+          100: "#d6d3d1", // sand-300
+          200: "#a8a29e", // sand-500
         },
-        blue: {
-          "100": "#E4ECFF",
-        },
-        purple: "#CBACF9",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

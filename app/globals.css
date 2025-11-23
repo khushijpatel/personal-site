@@ -4,65 +4,67 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 240 10% 3.9%;
+    /* Light theme with enhanced blues and greens */
+    --background: 45 5% 96%; /* sand-100 #f5f5f4 */
+    --foreground: 152 100% 8%; /* forest-900 #022c22 */
 
-    --card: 0 0% 100%;
-    --card-foreground: 240 10% 3.9%;
+    --card: 45 5% 96%; /* sand-100 */
+    --card-foreground: 152 100% 8%; /* forest-900 */
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 3.9%;
+    --popover: 45 5% 96%; /* sand-100 */
+    --popover-foreground: 152 100% 8%; /* forest-900 */
 
-    --primary: 240 5.9% 10%;
-    --primary-foreground: 0 0% 98%;
+    --primary: 199 89% 48%; /* ocean-500 #0ea5e9 */
+    --primary-foreground: 45 5% 96%; /* sand-100 */
 
-    --secondary: 240 4.8% 95.9%;
-    --secondary-foreground: 240 5.9% 10%;
+    --secondary: 24 6% 83%; /* sand-300 #d6d3d1 */
+    --secondary-foreground: 152 100% 8%; /* forest-900 */
 
-    --muted: 240 4.8% 95.9%;
-    --muted-foreground: 240 3.8% 46.1%;
+    --muted: 24 6% 83%; /* sand-300 */
+    --muted-foreground: 25 5% 66%; /* sand-500 */
 
-    --accent: 240 4.8% 95.9%;
-    --accent-foreground: 240 5.9% 10%;
+    --accent: 158 64% 52%; /* aurora #34d399 */
+    --accent-foreground: 45 5% 96%; /* sand-100 */
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive-foreground: 45 5% 96%;
 
-    --border: 240 5.9% 90%;
-    --input: 240 5.9% 90%;
-    --ring: 240 10% 3.9%;
+    --border: 24 6% 83%; /* sand-300 */
+    --input: 24 6% 83%; /* sand-300 */
+    --ring: 199 89% 48%; /* ocean-500 */
 
     --radius: 0.5rem;
   }
 
   .dark {
-    --background: 240 10% 3.9%;
-    --foreground: 0 0% 98%;
+    /* Dark theme with ocean and forest colors */
+    --background: 152 100% 8%; /* forest-900 #022c22 */
+    --foreground: 45 5% 96%; /* sand-100 #f5f5f4 */
 
-    --card: 240 10% 3.9%;
-    --card-foreground: 0 0% 98%;
+    --card: 152 100% 8%; /* forest-900 */
+    --card-foreground: 45 5% 96%; /* sand-100 */
 
-    --popover: 240 10% 3.9%;
-    --popover-foreground: 0 0% 98%;
+    --popover: 152 100% 8%; /* forest-900 */
+    --popover-foreground: 45 5% 96%; /* sand-100 */
 
-    --primary: 0 0% 98%;
-    --primary-foreground: 240 5.9% 10%;
+    --primary: 199 89% 48%; /* ocean-500 */
+    --primary-foreground: 152 100% 8%; /* forest-900 */
 
-    --secondary: 240 3.7% 15.9%;
-    --secondary-foreground: 0 0% 98%;
+    --secondary: 152 91% 19%; /* forest-800 #064e3b */
+    --secondary-foreground: 45 5% 96%; /* sand-100 */
 
-    --muted: 240 3.7% 15.9%;
-    --muted-foreground: 240 5% 64.9%;
+    --muted: 152 91% 19%; /* forest-800 */
+    --muted-foreground: 24 6% 83%; /* sand-300 */
 
-    --accent: 240 3.7% 15.9%;
-    --accent-foreground: 0 0% 98%;
+    --accent: 158 64% 52%; /* aurora #34d399 */
+    --accent-foreground: 152 100% 8%; /* forest-900 */
 
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive-foreground: 45 5% 96%;
 
-    --border: 240 3.7% 15.9%;
-    --input: 240 3.7% 15.9%;
-    --ring: 240 4.9% 83.9%;
+    --border: 152 91% 19%; /* forest-800 */
+    --input: 152 91% 19%; /* forest-800 */
+    --ring: 199 89% 48%; /* ocean-500 */
   }
 }
 
@@ -72,10 +74,76 @@
   }
   body {
     @apply bg-background text-foreground;
+    /* Beautiful blue-green gradient background */
+    background: linear-gradient(135deg, 
+      #022c22 0%,     /* deep forest green */
+      #064e3b 15%,    /* forest green */
+      #0369a1 30%,    /* ocean blue */
+      #047857 45%,    /* emerald green */
+      #0284c7 60%,    /* sky blue */
+      #34d399 75%,    /* aurora green */
+      #0ea5e9 90%,    /* bright ocean */
+      #022c22 100%    /* back to forest */
+    );
+    background-attachment: fixed;
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+    min-height: 100vh;
   }
   button {
     @apply active:outline-none;
   }
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Enhanced Scrollbar with blue-green accents */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background-color: #022c22; /* forest-900 */
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #047857, #0ea5e9, #34d399); /* forest-ocean-aurora */
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(45deg, #0284c7, #064e3b, #0369a1); /* shifting blues and greens */
+}
+
+/* Enhanced Glass Card Utility with blue-green theme */
+.glass-card {
+  background: linear-gradient(135deg, 
+    rgba(2, 44, 34, 0.4), 
+    rgba(14, 165, 233, 0.3), 
+    rgba(52, 211, 153, 0.2)
+  );
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(52, 211, 153, 0.2);
+  box-shadow: 
+    0 25px 45px -12px rgba(2, 44, 34, 0.25),
+    0 0 0 1px rgba(14, 165, 233, 0.05),
+    inset 0 1px 0 rgba(52, 211, 153, 0.1);
+}
+
+/* Quote box styling */
+.quote-box {
+  background: linear-gradient(135deg,
+    rgba(6, 78, 59, 0.8),
+    rgba(3, 105, 161, 0.7),
+    rgba(4, 120, 87, 0.6)
+  );
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(52, 211, 153, 0.3);
+  box-shadow: 
+    0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 0 0 1px rgba(14, 165, 233, 0.1),
+    inset 0 1px 0 rgba(52, 211, 153, 0.2);
 }
 
 @layer utilities {

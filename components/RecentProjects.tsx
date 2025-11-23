@@ -1,92 +1,3 @@
-// "use client";
-
-// import { FaLocationArrow } from "react-icons/fa6";
-// import { projects } from "@/data";
-// import { PinContainer } from "./ui/Pin";
-
-// const RecentProjects = () => {
-//   return (
-//     <div id="projects" className="py-20">
-//       <h1 className="heading">
-//         A small selection of{" "}
-//         <span className="text-purple">recent projects</span>
-//       </h1>
-//       <div className="flex flex-wrap items-center justify-center p-4 gap-16 mt-10">
-//         {projects.map((item) => (
-//           <div
-//             className="lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center sm:w-96 w-[80vw]"
-//             key={item.id}
-//           >
-//             <PinContainer
-//               title="/ui.aceternity.com"
-//               href="https://twitter.com/mannupaaji"
-//             >
-//               <div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[20vh] lg:h-[30vh] mb-10">
-//                 <div
-//                   className="relative w-full h-full overflow-hidden lg:rounded-3xl"
-//                   style={{ backgroundColor: "#13162D" }}
-//                 >
-//                   <img src="/bg.png" alt="bgimg" />
-//                 </div>
-//                 <img
-//                   src={item.img}
-//                   alt="cover"
-//                   className="z-10 absolute bottom-0"
-//                 />
-//               </div>
-
-//               <h1 className="font-bold lg:text-2xl md:text-xl text-base line-clamp-1">
-//                 {item.title}
-//               </h1>
-
-//               <p
-//                 className="lg:text-xl lg:font-normal font-light text-sm line-clamp-2"
-//                 style={{
-//                   color: "#BEC1DD",
-//                   margin: "1vh 0",
-//                 }}
-//               >
-//                 {item.des}
-//               </p>
-
-//               <div className="flex items-center justify-between mt-7 mb-3">
-//                 <div className="flex items-center">
-//                   {item.iconLists.map((icon, index) => (
-//                     <div
-//                       key={index}
-//                       className="border border-white/[.2] rounded-full bg-black lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center"
-//                       style={{
-//                         transform: `translateX(-${5 * index + 2}px)`,
-//                       }}
-//                     >
-//                       <img src={icon} alt="icon5" className="p-2" />
-//                     </div>
-//                   ))}
-//                 </div>
-
-//                 <a
-//                   href={item.link}
-//                   target="_blank"
-//                   rel="noopener noreferrer"
-//                   className="flex items-center"
-//                 >
-//                   <p className="flex lg:text-xl md:text-xs text-sm text-purple">
-//                     Check Live Site
-//                   </p>
-//                   <FaLocationArrow className="ms-3" color="#CBACF9" />
-//                 </a>
-//               </div>
-//             </PinContainer>
-//           </div>
-//         ))}
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default RecentProjects;
-
-
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
@@ -127,10 +38,10 @@ const RecentProjects = () => {
     <div id="projects" className="py-20">
       <h1 className="heading">
         A small selection of{" "}
-        <span className="text-purple">recent projects</span>
+        <span className="text-aurora">recent projects</span>
       </h1>
       <div className="flex flex-wrap items-center justify-center p-4 gap-16 mt-10">
-        {projects.map((item) => (
+        {projects.map((item, index) => (
           <div
             className="lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center sm:w-96 w-[80vw]"
             key={item.id}
@@ -143,7 +54,13 @@ const RecentProjects = () => {
               <div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[20vh] lg:h-[30vh] mb-10">
                 <div
                   className="relative w-full h-full overflow-hidden lg:rounded-3xl"
-                  style={{ backgroundColor: "#13162D" }}
+                  style={{
+                    background: index % 3 === 0 
+                      ? "linear-gradient(135deg, #064e3b, #0284c7)" 
+                      : index % 3 === 1 
+                      ? "linear-gradient(135deg, #0369a1, #34d399)" 
+                      : "linear-gradient(135deg, #022c22, #0ea5e9)"
+                  }}
                 >
                   <img src="/bg.png" alt="bgimg" />
                 </div>
@@ -158,24 +75,18 @@ const RecentProjects = () => {
                 {item.title}
               </h1>
 
-              <p
-                className="lg:text-xl lg:font-normal font-light text-sm line-clamp-2"
-                style={{
-                  color: "#BEC1DD",
-                  margin: "1vh 0",
-                }}
-              >
+              <p className="lg:text-xl lg:font-normal font-light text-sm line-clamp-2 text-sand-300 my-2">
                 {item.des}
               </p>
 
               <div className="flex items-center justify-between mt-7 mb-3">
                 <div className="flex items-center">
-                  {item.iconLists.map((icon, index) => (
+                  {item.iconLists.map((icon, iconIndex) => (
                     <div
-                      key={index}
-                      className="border border-white/[.2] rounded-full bg-black lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center"
+                      key={iconIndex}
+                      className="border border-white/[.2] rounded-full bg-ocean-600 lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center"
                       style={{
-                        transform: `translateX(-${5 * index + 2}px)`,
+                        transform: `translateX(-${5 * iconIndex + 2}px)`,
                       }}
                     >
                       <img src={icon} alt="icon5" className="p-2" />
@@ -184,10 +95,14 @@ const RecentProjects = () => {
                 </div>
 
                 <div className="flex justify-center items-center">
-                  <p className="flex lg:text-xl md:text-xs text-sm text-purple">
+                  <p className={`flex lg:text-xl md:text-xs text-sm ${
+                    index % 2 === 0 ? 'text-ocean-300' : 'text-aurora'
+                  }`}>
                     Check Live Site
                   </p>
-                  <FaLocationArrow className="ms-3" color="#CBACF9" />
+                  <FaLocationArrow className={`ms-3 ${
+                    index % 2 === 0 ? 'text-ocean-300' : 'text-aurora'
+                  }`} />
                 </div>
               </div>
             </PinContainer>
@@ -202,16 +117,16 @@ const RecentProjects = () => {
         >
           <div
             ref={popupRef}
-            className="bg-white p-8 rounded-lg max-w-md w-full relative"
+            className="bg-sand-100 p-8 rounded-lg max-w-md w-full relative border-2 border-ocean-300"
             onClick={(e) => e.stopPropagation()}
           >
-            <h2 className="text-black text-bold text-2xl font-bold mb-4">{selectedProject.title}</h2>
-            <p className="text-black text-base mb-4">{selectedProject.des}</p>
+            <h2 className="text-forest-900 text-bold text-2xl font-bold mb-4">{selectedProject.title}</h2>
+            <p className="text-forest-800 text-base mb-4">{selectedProject.des}</p>
             <div className="flex gap-2 mb-4">
               {selectedProject.iconLists.map((icon, index) => (
                 <div
                   key={index}
-                  className="border border-white/[.2] rounded-full bg-black lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center"
+                  className="border border-ocean-300 rounded-full bg-ocean-600 lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center"
                 >
                   <img src={icon} alt={`icon${index}`} className="p-2" />
                 </div>
@@ -221,7 +136,7 @@ const RecentProjects = () => {
               href={selectedProject.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-purple underline"
+              className="text-aurora underline hover:text-ocean-500 transition-colors"
             >
               Visit Live Site
             </a>

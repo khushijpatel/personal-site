@@ -6,7 +6,7 @@ const Experience = () => {
   return (
     <div id="experience" className="py-20 w-full">
       <h1 className="heading">
-        My <span className="text-purple">work experience</span>
+        My <span className="text-aurora">work experience</span>
       </h1>
 
       <div className="w-full mt-12 grid lg:grid-cols-4 grid-cols-1 gap-10">
@@ -16,9 +16,7 @@ const Experience = () => {
             duration={Math.floor(Math.random() * 10000) + 10000}
             borderRadius="1.75rem"
             style={{
-              background: "rgb(4,7,29)",
-              backgroundColor:
-                "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
+              background: "linear-gradient(90deg, rgba(2,44,34,1) 0%, rgba(6,78,59,1) 100%)",
               // make border more rounded so moving border is more realistic
               borderRadius: `calc(1.75rem* 0.96)`,
             }}
@@ -37,8 +35,8 @@ const Experience = () => {
                 <h3 className="text-start text-l md:text-xl">
                   {card.company}
                 </h3>
-                <h3 className="text-start text-white-100">{card.dates}</h3>
-                <p className="text-start text-white-100 mt-3 font-semibold">
+                <h3 className="text-start text-sand-300">{card.dates}</h3>
+                <p className="text-start text-sand-300 mt-3 font-semibold">
                   {card.desc}
                 </p>
               </div>

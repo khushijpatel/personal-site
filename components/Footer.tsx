@@ -17,9 +17,9 @@ const Footer = () => {
       <div className="flex flex-col items-center">
         <h1 className="heading lg:max-w-[45vw]">
           Want to talk about{" "}
-          <span className="text-purple">SWE, AI, HCI, or CV</span>?
+          <span className="text-ocean-300">SWE, AI, HCI, or CV</span>?
         </h1>
-        <p className="text-white-200 md:mt-10 my-5 text-center">
+        <p className="text-sand-300 md:mt-10 my-5 text-center">
           Reach out to me today and let&apos;s discuss to share ideas and learn
           from one another. I&apos;m open to talk about anything as a way for me
           to grow my knowledge.
@@ -34,13 +34,19 @@ const Footer = () => {
       </div>
       <div className="flex mt-16 md:flex-row flex-col justify-center items-center">
         <div className="flex items-center md:gap-3 gap-6">
-          {socialMedia.map((info) => (
+          {socialMedia.map((info, index) => (
             <a
               key={info.id}
               href={info.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-12 h-12 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-black-300"
+              className={`w-12 h-12 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 rounded-lg border transition-colors hover:scale-110 ${
+                index % 3 === 0 
+                  ? 'bg-ocean-600 border-ocean-500' 
+                  : index % 3 === 1 
+                  ? 'bg-forest-700 border-forest-700' 
+                  : 'bg-aurora/80 border-aurora'
+              }`}
             >
               <img
                 src={info.img}

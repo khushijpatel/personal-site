@@ -67,6 +67,26 @@ export const BentoGridItem = ({
     setCopied(true);
   };
 
+  // Dynamic background with blue-green gradients only
+  const getGridBackground = () => {
+    switch (id) {
+      case 1:
+        return "linear-gradient(135deg, rgba(2,44,34,0.9) 0%, rgba(14,165,233,0.8) 100%)";
+      case 2:
+        return "linear-gradient(135deg, rgba(3,105,161,0.9) 0%, rgba(52,211,153,0.8) 100%)";
+      case 3:
+        return "linear-gradient(135deg, rgba(6,78,59,0.9) 0%, rgba(2,132,199,0.8) 100%)";
+      case 4:
+        return "linear-gradient(135deg, rgba(2,132,199,0.9) 0%, rgba(4,120,87,0.8) 100%)";
+      case 5:
+        return "linear-gradient(135deg, rgba(4,120,87,0.9) 0%, rgba(14,165,233,0.8) 100%)";
+      case 6:
+        return "linear-gradient(135deg, rgba(14,165,233,0.9) 0%, rgba(6,78,59,0.8) 100%)";
+      default:
+        return "linear-gradient(90deg, rgba(2,44,34,1) 0%, rgba(6,78,59,1) 100%)";
+    }
+  };
+
   return (
     <div
       className={cn(
@@ -74,9 +94,7 @@ export const BentoGridItem = ({
         className
       )}
       style={{
-        background: "rgb(4,7,29)",
-        backgroundColor:
-          "linear-gradient(90deg, rgba(4,7,29,1) 0%, rgba(12,14,35,1) 100%)",
+        background: getGridBackground(),
       }}
     >
       <div className={`${id === 6 && "flex justify-center"} h-full`}>
@@ -114,7 +132,7 @@ export const BentoGridItem = ({
             "group-hover/bento:translate-x-2 transition duration-200 relative md:h-full min-h-40 flex flex-col px-5 p-5 lg:p-10"
           )}
         >
-          <div className="font-sans font-extralight md:max-w-32 md:text-xs lg:text-base text-sm text-[#C1C2D3] z-10">
+          <div className="font-sans font-extralight md:max-w-32 md:text-xs lg:text-base text-sm text-sand-300 z-10">
             {description}
           </div>
           <div
@@ -126,53 +144,52 @@ export const BentoGridItem = ({
           {/* for the github 3d globe */}
           {id === 2 && <GridGlobe />}
 
-          {/* Tech stack list div */}
+          {/* Tech stack list div with blue-green colors */}
           {id === 5 && (
             <div className="flex gap-1 lg:gap-1 w-fit absolute -right-1 lg:-right-2">
-              {/* tech stack lists */}
               <div className="flex flex-col gap-3 md:gap-3 lg:gap-6">
                 {list1.map((item, i) => (
                   <span
                     key={i}
                     className="lg:py-4 lg:px-3 py-2 px-3 text-xs lg:text-base opacity-50 
-                    lg:opacity-100 rounded-lg text-center bg-[#10132E]"
+                    lg:opacity-100 rounded-lg text-center bg-ocean-600"
                   >
                     {item}
                   </span>
                 ))}
-                <span className="lg:py-4 lg:px-3 py-4 px-3  rounded-lg text-center bg-[#10132E]"></span>
+                <span className="lg:py-4 lg:px-3 py-4 px-3  rounded-lg text-center bg-ocean-600"></span>
               </div>
               <div className="flex flex-col gap-3 md:gap-3 lg:gap-6">
                 {list2.map((item, i) => (
                   <span
                     key={i}
                     className="lg:py-4 lg:px-3 py-2 px-3 text-xs lg:text-base opacity-50 
-                    lg:opacity-100 rounded-lg text-center bg-[#10132E]"
+                    lg:opacity-100 rounded-lg text-center bg-forest-700"
                   >
                     {item}
                   </span>
                 ))}
-                <span className="lg:py-4 lg:px-3 py-4 px-3  rounded-lg text-center bg-[#10132E]"></span>
+                <span className="lg:py-4 lg:px-3 py-4 px-3  rounded-lg text-center bg-forest-700"></span>
               </div>
               <div className="flex flex-col gap-3 md:gap-3 lg:gap-6">
-                <span className="lg:py-4 lg:px-3 py-4 px-3  rounded-lg text-center bg-[#10132E]"></span>
+                <span className="lg:py-4 lg:px-3 py-4 px-3  rounded-lg text-center bg-aurora/80"></span>
                 {list3.map((item, i) => (
                   <span
                     key={i}
                     className="lg:py-4 lg:px-3 py-2 px-3 text-xs lg:text-base opacity-50 
-                    lg:opacity-100 rounded-lg text-center bg-[#10132E]"
+                    lg:opacity-100 rounded-lg text-center bg-aurora/80"
                   >
                     {item}
                   </span>
                 ))}
               </div>
               <div className="flex flex-col gap-3 md:gap-3 lg:gap-6">
-                <span className="lg:py-4 lg:px-3 py-4 px-3  rounded-lg text-center bg-[#10132E]"></span>
+                <span className="lg:py-4 lg:px-3 py-4 px-3  rounded-lg text-center bg-ocean-700"></span>
                 {list4.map((item, i) => (
                   <span
                     key={i}
                     className="lg:py-4 lg:px-3 py-2 px-3 text-xs lg:text-base opacity-50 
-                    lg:opacity-100 rounded-lg text-center bg-[#10132E]"
+                    lg:opacity-100 rounded-lg text-center bg-ocean-700"
                   >
                     {item}
                   </span>
@@ -182,13 +199,11 @@ export const BentoGridItem = ({
           )}
           {id === 6 && (
             <div className="mt-5 relative">
-              {/* button border magic from tailwind css buttons  */}
               <div
                 className={`absolute -bottom-5 right-0 ${
                   copied ? "block" : "block"
                 }`}
               >
-                {/* <img src="/confetti.gif" alt="confetti" /> */}
                 <Lottie options={defaultOptions} height={200} width={400} />
               </div>
 
@@ -197,7 +212,7 @@ export const BentoGridItem = ({
                 icon={<IoCopyOutline />}
                 position="left"
                 handleClick={handleCopy}
-                otherClasses="!bg-[#161A31]"
+                otherClasses="!bg-ocean-600"
               />
             </div>
           )}

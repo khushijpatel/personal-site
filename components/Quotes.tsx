@@ -8,7 +8,7 @@ const Quotes = () => {
   return (
     <section id="quotes" className="py-20">
       <h1 className="heading">
-        <span className="text-purple">Insiparational Quotes</span>
+        <span className="text-ocean-500">Inspirational Quotes</span>
       </h1>
 
       <div className="flex flex-col items-center max-lg:mt-10">
