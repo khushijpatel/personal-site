@@ -33,17 +33,6 @@ const config = {
           800: "#064e3b",
           700: "#047857",
         },
-        ocean: {
-          500: "#0ea5e9",
-          300: "#7dd3fc",
-          600: "#0284c7",
-          700: "#0369a1",
-        },
-        sand: {
-          100: "#f5f5f4",
-          300: "#d6d3d1",
-          500: "#a8a29e",
-        },
         aurora: "#34d399",
         // Enhanced color palette with blues and purples
         blue: {
