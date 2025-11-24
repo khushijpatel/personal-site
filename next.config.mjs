@@ -1,6 +1,15 @@
 import {withSentryConfig} from '@sentry/nextjs';
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+  // Add Turbopack configuration to silence the warning and ensure compatibility
+  turbopack: {},
+  // Optional: You can also explicitly set experimental features if needed
+  experimental: {
+    turbo: {
+      // Add any Turbopack-specific configurations here if needed in the future
+    }
+  }
+};
 
 export default withSentryConfig(nextConfig, {
 // For all available options, see:

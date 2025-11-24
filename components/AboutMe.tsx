@@ -1,6 +1,15 @@
 import React from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { CanvasRevealEffect } from "./ui/CanvasRevealEffect";
+import dynamic from "next/dynamic";
+
+// Dynamically import CanvasRevealEffect to avoid SSR issues
+const CanvasRevealEffect = dynamic(
+  () => import("./ui/CanvasRevealEffect").then((mod) => mod.CanvasRevealEffect),
+  { 
+    ssr: false,
+    loading: () => <div className="h-full w-full bg-gray-800 animate-pulse rounded-3xl" />
+  }
+);
 
 const AboutMe = () => {
   return (

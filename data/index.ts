@@ -107,8 +107,7 @@ export const quotes = [
     name: "Maya Angelou",
   },
   {
-    quote:
-      "Thousands of candles can be lighted from a single candle, and the life of the candle will not be shortened. Happiness never decreases by being shared.",
+    quote: "Thousands of candles can be lighted from a single candle, and the life of the candle will not be shortened. Happiness never decreases by being shared.",
     name: "Buddha",
   },
   {
@@ -116,9 +115,8 @@ export const quotes = [
     name: "Stephen Hawking",
   },
   {
-    quote:
-      "We are all now connected by the Internet, like neurons in a giant brain.",
-    name: "Stephen Hawking",
+    quote: "We are all now connected by the Internet, like neurons in a giant brain.",
+    name: "Stephen Hawking ",
   },
 ];
 
