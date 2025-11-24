@@ -4,67 +4,67 @@
 
 @layer base {
   :root {
-    /* Light theme with enhanced blues and greens */
-    --background: 45 5% 96%; /* sand-100 #f5f5f4 */
-    --foreground: 152 100% 8%; /* forest-900 #022c22 */
+    /* Light theme with beach colors */
+    --background: 195 100% 96%; /* sandy white #f0f9ff */
+    --foreground: 210 100% 15%; /* deep ocean #003366 */
 
-    --card: 45 5% 96%; /* sand-100 */
-    --card-foreground: 152 100% 8%; /* forest-900 */
+    --card: 195 100% 96%; /* sandy white */
+    --card-foreground: 210 100% 15%; /* deep ocean */
 
-    --popover: 45 5% 96%; /* sand-100 */
-    --popover-foreground: 152 100% 8%; /* forest-900 */
+    --popover: 195 100% 96%; /* sandy white */
+    --popover-foreground: 210 100% 15%; /* deep ocean */
 
-    --primary: 199 89% 48%; /* ocean-500 #0ea5e9 */
-    --primary-foreground: 45 5% 96%; /* sand-100 */
+    --primary: 199 89% 48%; /* ocean blue #0ea5e9 */
+    --primary-foreground: 195 100% 96%; /* sandy white */
 
-    --secondary: 24 6% 83%; /* sand-300 #d6d3d1 */
-    --secondary-foreground: 152 100% 8%; /* forest-900 */
+    --secondary: 39 85% 85%; /* warm sand #f4e4bc */
+    --secondary-foreground: 210 100% 15%; /* deep ocean */
 
-    --muted: 24 6% 83%; /* sand-300 */
-    --muted-foreground: 25 5% 66%; /* sand-500 */
+    --muted: 39 85% 85%; /* warm sand */
+    --muted-foreground: 210 50% 40%; /* ocean depths */
 
-    --accent: 158 64% 52%; /* aurora #34d399 */
-    --accent-foreground: 45 5% 96%; /* sand-100 */
+    --accent: 180 84% 45%; /* vibrant tropical teal #17a2b8 */
+    --accent-foreground: 195 100% 96%; /* sandy white */
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 45 5% 96%;
+    --destructive-foreground: 195 100% 96%;
 
-    --border: 24 6% 83%; /* sand-300 */
-    --input: 24 6% 83%; /* sand-300 */
-    --ring: 199 89% 48%; /* ocean-500 */
+    --border: 39 85% 85%; /* warm sand */
+    --input: 39 85% 85%; /* warm sand */
+    --ring: 199 89% 48%; /* ocean blue */
 
     --radius: 0.5rem;
   }
 
   .dark {
-    /* Dark theme with ocean and forest colors */
-    --background: 152 100% 8%; /* forest-900 #022c22 */
-    --foreground: 45 5% 96%; /* sand-100 #f5f5f4 */
+    /* Dark theme optimized for beach sunset */
+    --background: 210 100% 15%; /* deep ocean #003366 */
+    --foreground: 195 100% 96%; /* sandy white */
 
-    --card: 152 100% 8%; /* forest-900 */
-    --card-foreground: 45 5% 96%; /* sand-100 */
+    --card: 210 100% 15%; /* deep ocean */
+    --card-foreground: 195 100% 96%; /* sandy white */
 
-    --popover: 152 100% 8%; /* forest-900 */
-    --popover-foreground: 45 5% 96%; /* sand-100 */
+    --popover: 210 100% 15%; /* deep ocean */
+    --popover-foreground: 195 100% 96%; /* sandy white */
 
-    --primary: 199 89% 48%; /* ocean-500 */
-    --primary-foreground: 152 100% 8%; /* forest-900 */
+    --primary: 199 89% 48%; /* ocean blue */
+    --primary-foreground: 210 100% 15%; /* deep ocean */
 
-    --secondary: 152 91% 19%; /* forest-800 #064e3b */
-    --secondary-foreground: 45 5% 96%; /* sand-100 */
+    --secondary: 210 80% 25%; /* deeper ocean */
+    --secondary-foreground: 195 100% 96%; /* sandy white */
 
-    --muted: 152 91% 19%; /* forest-800 */
-    --muted-foreground: 24 6% 83%; /* sand-300 */
+    --muted: 210 80% 25%; /* deeper ocean */
+    --muted-foreground: 39 85% 85%; /* warm sand */
 
-    --accent: 158 64% 52%; /* aurora #34d399 */
-    --accent-foreground: 152 100% 8%; /* forest-900 */
+    --accent: 180 84% 45%; /* vibrant tropical teal */
+    --accent-foreground: 210 100% 15%; /* deep ocean */
 
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 45 5% 96%;
+    --destructive-foreground: 195 100% 96%;
 
-    --border: 152 91% 19%; /* forest-800 */
-    --input: 152 91% 19%; /* forest-800 */
-    --ring: 199 89% 48%; /* ocean-500 */
+    --border: 210 80% 25%; /* deeper ocean */
+    --input: 210 80% 25%; /* deeper ocean */
+    --ring: 199 89% 48%; /* ocean blue */
   }
 }
 
@@ -74,80 +74,193 @@
   }
   body {
     @apply bg-background text-foreground;
-    /* Beautiful blue-green gradient background */
+    /* Enhanced beach sunset gradient background */
     background: linear-gradient(135deg, 
-      #022c22 0%,     /* deep forest green */
-      #064e3b 15%,    /* forest green */
-      #0369a1 30%,    /* ocean blue */
-      #047857 45%,    /* emerald green */
-      #0284c7 60%,    /* sky blue */
-      #34d399 75%,    /* aurora green */
-      #0ea5e9 90%,    /* bright ocean */
-      #022c22 100%    /* back to forest */
+      #87CEEB 0%,     /* sky blue */
+      #FFE4B5 8%,     /* moccasin */
+      #17a2b8 16%,    /* vibrant teal */
+      #FF7F50 24%,    /* coral */
+      #4682B4 32%,    /* steel blue */
+      #F0E68C 40%,    /* khaki */
+      #00CED1 48%,    /* dark turquoise */
+      #FF6347 56%,    /* tomato */
+      #20B2AA 64%,    /* light sea green */
+      #FFA07A 72%,    /* light salmon */
+      #17a2b8 80%,    /* vibrant teal */
+      #87CEEB 88%,    /* sky blue */
+      #FFE4B5 96%,    /* moccasin */
+      #87CEEB 100%    /* back to sky blue */
     );
     background-attachment: fixed;
     background-size: 400% 400%;
-    animation: gradientShift 15s ease infinite;
+    animation: waveMotion 30s ease infinite;
     min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
   }
+  
+  /* Enhanced floating particles like sand, shells, and sea foam */
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+      /* Large sand particles */
+      radial-gradient(3px 3px at 25px 35px, rgba(244,228,188,0.9), transparent),
+      radial-gradient(2px 2px at 45px 75px, rgba(255,255,255,0.8), transparent),
+      radial-gradient(4px 4px at 95px 45px, rgba(240,230,140,0.7), transparent),
+      
+      /* Medium sea foam */
+      radial-gradient(2px 2px at 135px 85px, rgba(23,162,184,0.6), transparent),
+      radial-gradient(3px 3px at 165px 35px, rgba(255,255,255,0.9), transparent),
+      radial-gradient(1px 1px at 205px 95px, rgba(135,206,235,0.5), transparent),
+      
+      /* Small sparkles */
+      radial-gradient(1px 1px at 245px 55px, rgba(255,255,255,1), transparent),
+      radial-gradient(2px 2px at 285px 15px, rgba(23,162,184,0.6), transparent),
+      radial-gradient(1px 1px at 325px 75px, rgba(255,127,80,0.4), transparent),
+      radial-gradient(3px 3px at 365px 45px, rgba(173,216,230,0.7), transparent),
+      
+      /* Tiny details */
+      radial-gradient(1px 1px at 15px 65px, rgba(255,255,255,0.8), transparent),
+      radial-gradient(2px 2px at 55px 25px, rgba(240,230,140,0.6), transparent);
+    background-repeat: repeat;
+    background-size: 400px 300px;
+    animation: drift 8s linear infinite;
+    pointer-events: none;
+    z-index: -1;
+  }
+  
+  /* Enhanced ocean wave effect with multiple layers */
+  body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+      /* Large waves */
+      radial-gradient(ellipse at 25% 15%, rgba(23, 162, 184, 0.15) 0%, transparent 50%),
+      radial-gradient(ellipse at 75% 85%, rgba(135, 206, 235, 0.12) 0%, transparent 50%),
+      radial-gradient(ellipse at 5% 65%, rgba(255, 127, 80, 0.08) 0%, transparent 50%),
+      
+      /* Medium waves */
+      radial-gradient(ellipse at 60% 30%, rgba(0, 206, 209, 0.1) 0%, transparent 40%),
+      radial-gradient(ellipse at 15% 80%, rgba(240, 230, 140, 0.08) 0%, transparent 45%),
+      
+      /* Small ripples */
+      radial-gradient(ellipse at 85% 20%, rgba(23, 162, 184, 0.06) 0%, transparent 35%),
+      radial-gradient(ellipse at 40% 90%, rgba(255, 127, 80, 0.05) 0%, transparent 30%);
+    animation: oceanWaves 25s ease-in-out infinite;
+    pointer-events: none;
+    z-index: -1;
+  }
+  
   button {
     @apply active:outline-none;
   }
 }
 
-@keyframes gradientShift {
+@keyframes waveMotion {
   0% { background-position: 0% 50%; }
+  25% { background-position: 25% 75%; }
   50% { background-position: 100% 50%; }
+  75% { background-position: 75% 25%; }
   100% { background-position: 0% 50%; }
 }
 
-/* Enhanced Scrollbar with blue-green accents */
+@keyframes drift {
+  0% { 
+    opacity: 0.3; 
+    transform: translateY(0px) translateX(0px) scale(1) rotate(0deg); 
+  }
+  25% { 
+    opacity: 0.8; 
+    transform: translateY(-5px) translateX(2px) scale(1.05) rotate(2deg); 
+  }
+  50% { 
+    opacity: 1; 
+    transform: translateY(-12px) translateX(-3px) scale(1.1) rotate(-1deg); 
+  }
+  75% { 
+    opacity: 0.7; 
+    transform: translateY(-8px) translateX(1px) scale(1.03) rotate(1deg); 
+  }
+  100% { 
+    opacity: 0.3; 
+    transform: translateY(0px) translateX(0px) scale(1) rotate(0deg); 
+  }
+}
+
+@keyframes oceanWaves {
+  0%, 100% { transform: translate(0, 0) rotate(0deg) scale(1); }
+  20% { transform: translate(-10px, -3px) rotate(0.3deg) scale(1.02); }
+  40% { transform: translate(15px, -8px) rotate(-0.2deg) scale(0.98); }
+  60% { transform: translate(-8px, 5px) rotate(0.4deg) scale(1.01); }
+  80% { transform: translate(12px, -2px) rotate(-0.1deg) scale(0.99); }
+}
+
+/* Beach-themed scrollbar */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 12px;
 }
 ::-webkit-scrollbar-track {
-  background-color: #022c22; /* forest-900 */
+  background: linear-gradient(180deg, #87CEEB, #17a2b8);
 }
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(45deg, #047857, #0ea5e9, #34d399); /* forest-ocean-aurora */
-  border-radius: 9999px;
+  background: linear-gradient(180deg, #FF7F50, #00CED1, #F0E68C);
+  border-radius: 12px;
+  border: 2px solid #87CEEB;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(45deg, #0284c7, #064e3b, #0369a1); /* shifting blues and greens */
+  background: linear-gradient(180deg, #17a2b8, #FF7F50, #00CED1);
 }
 
-/* Enhanced Glass Card Utility with blue-green theme */
+/* Enhanced Glass Card Utility with beach theme */
 .glass-card {
   background: linear-gradient(135deg, 
-    rgba(2, 44, 34, 0.4), 
-    rgba(14, 165, 233, 0.3), 
-    rgba(52, 211, 153, 0.2)
+    rgba(135, 206, 235, 0.25), 
+    rgba(23, 162, 184, 0.2), 
+    rgba(255, 127, 80, 0.15),
+    rgba(240, 230, 140, 0.1)
   );
-  backdrop-filter: blur(16px);
-  border: 1px solid rgba(52, 211, 153, 0.2);
+  backdrop-filter: blur(25px);
+  border: 1px solid rgba(23, 162, 184, 0.4);
   box-shadow: 
-    0 25px 45px -12px rgba(2, 44, 34, 0.25),
-    0 0 0 1px rgba(14, 165, 233, 0.05),
-    inset 0 1px 0 rgba(52, 211, 153, 0.1);
+    0 25px 45px -12px rgba(135, 206, 235, 0.4),
+    0 0 0 1px rgba(23, 162, 184, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.25),
+    0 0 25px rgba(0, 206, 209, 0.15),
+    0 5px 15px rgba(255, 127, 80, 0.1);
 }
 
-/* Quote box styling */
+/* Enhanced Quote box with beach styling */
 .quote-box {
   background: linear-gradient(135deg,
-    rgba(6, 78, 59, 0.8),
-    rgba(3, 105, 161, 0.7),
-    rgba(4, 120, 87, 0.6)
+    rgba(135, 206, 235, 0.9),
+    rgba(23, 162, 184, 0.8),
+    rgba(255, 127, 80, 0.7),
+    rgba(240, 230, 140, 0.6)
   );
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(52, 211, 153, 0.3);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(23, 162, 184, 0.5);
   box-shadow: 
-    0 20px 25px -5px rgba(0, 0, 0, 0.1),
-    0 0 0 1px rgba(14, 165, 233, 0.1),
-    inset 0 1px 0 rgba(52, 211, 153, 0.2);
+    0 20px 25px -5px rgba(135, 206, 235, 0.3),
+    0 0 0 1px rgba(23, 162, 184, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4),
+    0 0 35px rgba(240, 230, 140, 0.15);
 }
 
 @layer utilities {
   .heading {
     @apply font-bold text-4xl md:text-5xl text-center;
+    background: linear-gradient(135deg, #003366, #17a2b8, #FF7F50);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
 }

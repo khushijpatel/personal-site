@@ -38,7 +38,7 @@ const RecentProjects = () => {
     <div id="projects" className="py-20">
       <h1 className="heading">
         A small selection of{" "}
-        <span className="text-aurora">recent projects</span>
+        <span className="text-nebula-pink-400">recent projects</span>
       </h1>
       <div className="flex flex-wrap items-center justify-center p-4 gap-16 mt-10">
         {projects.map((item, index) => (
@@ -56,10 +56,10 @@ const RecentProjects = () => {
                   className="relative w-full h-full overflow-hidden lg:rounded-3xl"
                   style={{
                     background: index % 3 === 0 
-                      ? "linear-gradient(135deg, #064e3b, #0284c7)" 
+                      ? "linear-gradient(135deg, #581c87, #a855f7)" 
                       : index % 3 === 1 
-                      ? "linear-gradient(135deg, #0369a1, #34d399)" 
-                      : "linear-gradient(135deg, #022c22, #0ea5e9)"
+                      ? "linear-gradient(135deg, #6b46c1, #ff6bff)" 
+                      : "linear-gradient(135deg, #0f0f23, #c084fc)"
                   }}
                 >
                   <img src="/bg.png" alt="bgimg" />
@@ -71,11 +71,11 @@ const RecentProjects = () => {
                 />
               </div>
 
-              <h1 className="font-bold lg:text-2xl md:text-xl text-base line-clamp-1">
+              <h1 className="font-bold lg:text-2xl md:text-xl text-base line-clamp-1 text-stardust-50">
                 {item.title}
               </h1>
 
-              <p className="lg:text-xl lg:font-normal font-light text-sm line-clamp-2 text-sand-300 my-2">
+              <p className="lg:text-xl lg:font-normal font-light text-sm line-clamp-2 text-stardust-200 my-2">
                 {item.des}
               </p>
 
@@ -84,7 +84,7 @@ const RecentProjects = () => {
                   {item.iconLists.map((icon, iconIndex) => (
                     <div
                       key={iconIndex}
-                      className="border border-white/[.2] rounded-full bg-ocean-600 lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center"
+                      className="border border-cosmic-purple-500/20 rounded-full bg-cosmic-purple-600 lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center"
                       style={{
                         transform: `translateX(-${5 * iconIndex + 2}px)`,
                       }}
@@ -96,12 +96,12 @@ const RecentProjects = () => {
 
                 <div className="flex justify-center items-center">
                   <p className={`flex lg:text-xl md:text-xs text-sm ${
-                    index % 2 === 0 ? 'text-ocean-300' : 'text-aurora'
+                    index % 2 === 0 ? 'text-cosmic-purple-300' : 'text-nebula-pink-400'
                   }`}>
                     Check Live Site
                   </p>
                   <FaLocationArrow className={`ms-3 ${
-                    index % 2 === 0 ? 'text-ocean-300' : 'text-aurora'
+                    index % 2 === 0 ? 'text-cosmic-purple-300' : 'text-nebula-pink-400'
                   }`} />
                 </div>
               </div>
@@ -117,16 +117,16 @@ const RecentProjects = () => {
         >
           <div
             ref={popupRef}
-            className="bg-sand-100 p-8 rounded-lg max-w-md w-full relative border-2 border-ocean-300"
+            className="bg-deep-space-800 p-8 rounded-lg max-w-md w-full relative border-2 border-cosmic-purple-400 glass-card"
             onClick={(e) => e.stopPropagation()}
           >
-            <h2 className="text-forest-900 text-bold text-2xl font-bold mb-4">{selectedProject.title}</h2>
-            <p className="text-forest-800 text-base mb-4">{selectedProject.des}</p>
+            <h2 className="text-stardust-50 text-bold text-2xl font-bold mb-4">{selectedProject.title}</h2>
+            <p className="text-stardust-200 text-base mb-4">{selectedProject.des}</p>
             <div className="flex gap-2 mb-4">
               {selectedProject.iconLists.map((icon, index) => (
                 <div
                   key={index}
-                  className="border border-ocean-300 rounded-full bg-ocean-600 lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center"
+                  className="border border-cosmic-purple-400 rounded-full bg-cosmic-purple-600 lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center"
                 >
                   <img src={icon} alt={`icon${index}`} className="p-2" />
                 </div>
@@ -136,7 +136,7 @@ const RecentProjects = () => {
               href={selectedProject.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-aurora underline hover:text-ocean-500 transition-colors"
+              className="text-nebula-pink-400 underline hover:text-cosmic-purple-300 transition-colors"
             >
               Visit Live Site
             </a>

@@ -17,9 +17,9 @@ const Footer = () => {
       <div className="flex flex-col items-center">
         <h1 className="heading lg:max-w-[45vw]">
           Want to talk about{" "}
-          <span className="text-ocean-300">SWE, AI, HCI, or CV</span>?
+          <span className="text-coral-500">SWE, AI, HCI, or CV</span>?
         </h1>
-        <p className="text-sand-300 md:mt-10 my-5 text-center">
+        <p className="text-sand-200 md:mt-10 my-5 text-center">
           Reach out to me today and let&apos;s discuss to share ideas and learn
           from one another. I&apos;m open to talk about anything as a way for me
           to grow my knowledge.
@@ -44,8 +44,8 @@ const Footer = () => {
                 index % 3 === 0 
                   ? 'bg-ocean-600 border-ocean-500' 
                   : index % 3 === 1 
-                  ? 'bg-forest-700 border-forest-700' 
-                  : 'bg-aurora/80 border-aurora'
+                  ? 'bg-coral-600 border-coral-500' 
+                  : 'bg-tropical-600 border-tropical-500'
               }`}
             >
               <img
